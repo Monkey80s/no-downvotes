@@ -1,0 +1,12 @@
+{
+  "name": "No Downvotes",
+  "uri": "https://tu-sitio.com",
+  "description": "Elimina la opción de voto negativo en preguntas y respuestas",
+  "version": "1.0",
+  "date": "2025-09-04",
+  "author": "Monkey",
+  "author_uri": "https://tu-sitio.com",
+  "license": "GPLv2",
+  "load_order": "after_db_init",
+  "notes": "Este plugin desactiva los votos negativos en Q2A y es compatible con el tema SnowFlat."
+}
