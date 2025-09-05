@@ -1,0 +1,22 @@
+<?php
+/*
+    Plugin Name: No Downvotes
+    Plugin URI: https://tu-sitio.com
+    Plugin Description: Elimina la opción de voto negativo en preguntas y respuestas
+    Plugin Version: 1.0
+    Plugin Date: 2025-09-04
+    Plugin Author: Monkey
+    Plugin Author URI: https://tu-sitio.com
+    Plugin License: GPLv2
+*/
+
+if (!defined('QA_VERSION')) {
+    header('Location: ../../');
+    exit;
+}
+
+// Registrar la capa visual
+qa_register_layer('no-downvotes-layer.php', 'No Downvotes Layer', dirname(__FILE__) . '/');
+
+// Interceptar votos negativos
+qa_register_plugin_module('event', 'no-downvotes-event.php', 'no_downvotes_event', 'No Downvotes Event Handler');
